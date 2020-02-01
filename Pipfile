@@ -8,6 +8,7 @@ pylint = "*"
 
 [packages]
 webbrowser = "*"
+twine = "*"
 
 [requires]
 python_version = "3.7"
