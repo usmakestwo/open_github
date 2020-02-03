@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="open-github", # Replace with your own username
-    version="0.0.1",
+    version="1.0.0",
     author="Gonzalo Vazquez",
     author_email="gvazquez@usmakestwo.io",
     description="A simple script that opens a Github page from the command line.",
