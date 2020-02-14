@@ -7,6 +7,8 @@ import argparse
 # Grab working directory from argument
 parser = argparse.ArgumentParser(description="Working git directory")
 parser.add_argument("directory", metavar="D", help="Directory", nargs='?', default=".")
+parser.add_argument("-v", action="store_true", help="Prints url to console")
+
 args = parser.parse_args()
 dir_path = os.getcwd()
 
@@ -28,4 +30,7 @@ parsed_url = url.strip().split('@')[1].replace(":", "/").replace(".git", "")
 final_url = "https://" + parsed_url
 
 # Open url in a new page (“tab”) of the default browser, if possible
-webbrowser.open_new_tab(final_url)
+if args.v:
+  print(final_url)
+else:
+  webbrowser.open_new_tab(final_url)
